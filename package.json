@@ -3,7 +3,19 @@
   "version": "1.0.0",
   "description": "RESTful Server for HRLA-Scheduler",
   "scripts": {
+    "start": "node index.js",
+    "nodemon": "nodemon index.js"
   },
   "author": "Studio Zephyr",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
 }
