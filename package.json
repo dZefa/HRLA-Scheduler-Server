@@ -1,0 +1,9 @@
+{
+  "name": "hrla-scheduler-server",
+  "version": "1.0.0",
+  "description": "RESTful Server for HRLA-Scheduler",
+  "scripts": {
+  },
+  "author": "Studio Zephyr",
+  "license": "ISC"
+}
