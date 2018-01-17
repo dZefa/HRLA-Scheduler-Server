@@ -8,8 +8,9 @@ const dotenv = require('dotenv');
 // initialize environment variables
 dotenv.config();
 
-// import database sync method
+// import database related files
 const { syncDB } = require('./db/util/syncDB');
+const routes = require('./db/route');
 
 // define constants
 const PORT = process.env.PORT;
@@ -22,6 +23,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(morgan('short'));
+
+// API routes
+app.use('/api', routes);
 
 // serve static files and catch routes
 app.use(express.static(DIST_PATH));
