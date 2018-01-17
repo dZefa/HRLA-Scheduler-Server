@@ -8,6 +8,9 @@ const dotenv = require('dotenv');
 // initialize environment variables
 dotenv.config();
 
+// import database sync method
+const { syncDB } = require('./db/util/syncDB');
+
 // define constants
 const PORT = process.env.PORT;
 const DIST_PATH = path.resolve(__dirname, process.env.DIST_PATH); // remove path.resolve if path is not local
@@ -28,4 +31,5 @@ app.get('/*', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Listening in on port: ${PORT}`);
+  syncDB(); // Pass in true if you would like to force true
 });
