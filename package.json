@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "nodemon": "nodemon index.js",
-    "seed": "node db/util/seed.js"
+    "seed": "node db/util/seed.js",
+    "dropDB": "node db/util/dropDB.js"
   },
   "author": "Studio Zephyr",
   "license": "ISC",
