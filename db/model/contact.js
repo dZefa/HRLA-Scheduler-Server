@@ -14,7 +14,7 @@ const Contact = db.define('Contact', {
   },
 });
 
-User.hasMany(Contact, { foreignKey: 'userId', allowNull: false, onDelete: 'CASCADE' });
 Contact.belongsTo(User, { foreignKey: 'userId', allowNull: false, onDelete: 'CASCADE' });
+User.hasMany(Contact);
 
 module.exports = Contact;

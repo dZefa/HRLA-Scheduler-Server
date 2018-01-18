@@ -4,7 +4,8 @@
   "description": "RESTful Server for HRLA-Scheduler",
   "scripts": {
     "start": "node index.js",
-    "nodemon": "nodemon index.js"
+    "nodemon": "nodemon index.js",
+    "seed": "node db/util/seed.js"
   },
   "author": "Studio Zephyr",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "nodemon": "^1.14.11"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
